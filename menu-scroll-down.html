@@ -2,6 +2,15 @@
 <html>
   <head>
     <link rel="stylesheet" href="./assets/stylesheet/css/menu.css">
+    <style>
+      /* faire le style css pour que la nav bar se fixe en haut */
+      .menuFixe{
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
 </head>
   <body>
   <nav id="menu">
@@ -19,6 +28,22 @@
   </div>
     <script>
     //TODO
+    // pointeur vers la navbar
+    const navbar = document.querySelector('#menu');
+    
+  
+    //crée evenement qui fixe la navbar des qu'on scroll 70 px
+    window.addEventListener(('scroll'),() => {
+      if(window.scrollY >= 70){
+        navbar.classList.add('menuFixe');
+      }
+      else{
+        navbar.classList.remove('menuFixe');
+      }
+
+      
+
+    });
     </script>
   </body>
 </html>
