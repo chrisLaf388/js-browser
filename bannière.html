@@ -33,23 +33,30 @@
     </div>
     <div id="banner">
       <img id="photo" src= "assets\images\photonews.jpg" alt="">
-      <p id ="close">X</p>
+      <button id ="close">Fermer X</button>
     </div>
     
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptatum accusantium id consectetur explicabo commodi doloremque nam. Provident ea, vero dolor ut voluptatum possimus animi harum, autem et nobis est.</p>
   
     <script>
-        const photo = document.querySelector('#banner');
-        console.log(photo);
-
-      setTimeout( () =>{
-        photo.style.opacity = 1;
-      },10);
       //TODO
-      //set time out () => {
-	//list. insert;
-//}, 2000)
+      //Création de la variable qui pointe vers la bannière newsletter
+        const bannerNewsletter = document.querySelector('#banner');
+        console.log(bannerNewsletter);
 
+      //Affichage de la banner Newsletter 2 seconde apres le chargement de la page
+      setTimeout( () =>{
+        bannerNewsletter.style.opacity = 1;
+      },2000);
+      
+      //Création de la variable qui pointe vers le bouton fermer
+      const closeBanner = document.querySelector('#close');
+
+      //Crée un micro qui pointe vers le bouton 
+      // Ecrire le callback qui rend non visible la bannière
+      closeBanner.addEventListener('click', () => {
+          bannerNewsletter.style.display = 'none';
+        });
     
     </script>
   </body>
