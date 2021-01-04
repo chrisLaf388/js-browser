@@ -27,9 +27,40 @@
       <script>
         //TODO
         //1 - Séléctionner l'éléments HTML 'bouton paramoteur' avec querySelector et le mettre dans une variable.
+        const boutonParamoteur = document.querySelector('#paramoteur');
+    
+        const boutonMultiaxe = document.querySelector('#multiaxe');
+
+        const boutonAll = document.querySelector('#all');
+
         //2 - Séléctionner la liste ul 'multiaxe' avec querySelector et la mettre dans une variable.
+        const multiaxe = document.querySelector('.multiaxe');
+
+        const paramoteur = document.querySelector('.paramoteur');
+
         //3 - Placer un 'micro' avec un addEventListener (click) sur l'élément HTML 'bouton paramoteur'
         //4 - Dans le callback de l'addEventListener, faire disparaitre le liste 'multiaxe' à l'aide de ce code: multiaxe.style.display = 'none'; Tester cette instruction dans la console du navigateur.
+        
+        boutonParamoteur.addEventListener('click', () => {
+          multiaxe.style.display = 'none';
+          paramoteur.style.display = 'block';
+          //debugger;
+        });
+
+        boutonMultiaxe.addEventListener('click', () => {
+          paramoteur.style.display = 'none';
+          multiaxe.style.display = 'block';
+          //debugger;
+        });
+
+        boutonAll.addEventListener('click', () => {
+          paramoteur.style.display = 'block';
+          multiaxe.style.display = 'block';
+          //debugger;
+        });
+
+
+
         //5 - Placer un 'debugger' dans le callback en cas de problème.
       </script>
   </body>

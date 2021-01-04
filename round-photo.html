@@ -2,6 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="./assets/stylesheet/css/round-photo.css">
+    <style>
+      .circle{
+        border-radius: 50%;
+      }
+    </style>
 </head>
   <body>
     <h1>Round photo</h1>
@@ -12,10 +17,28 @@
       </p>
     </div>
       <div id="photo1">
-        <img src="./assets/images/round-photo/photo1.jpg" width="20%">
+        <img class="circle" src="./assets/images/round-photo/photo1.jpg" width="20%">
       </div>
     <script>
-       //TODO
+       // 1- Sélectionner l'image
+       const image = document.querySelector('img');
+       
+       // 2- Placer un 'micro' avec un addEventListener (mouseHover) sur l'élément HTML 'img', id
+       image.addEventListener('mouseover', () => {
+         image.style.opacity=0.33;
+      });
+      //désassombrir l'img quand plus over
+        image.addEventListener('mouseout', () => {
+         image.style.opacity=1;
+      });
+
+       // 3- Idem avec click de la photo
+
+       image.addEventListener('click', () => {
+         image.classList.toggle('circle');
+      });
+       //4 - Dans le callback de l'addEventListener MouseHover, assombrir l'image 
+       //5- idem pour click, arrondir l'img
     </script>
   </body>
 </html>
