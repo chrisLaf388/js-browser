@@ -27,17 +27,35 @@
       
       //pointer vers input pour recup value
       const input = document.querySelector('input');
-      
+
+      //pointer vers bouton supprimer
+
+      const button = document.querySelector("#Supprime");
+
+
+      const list = document.querySelector('#maListeDeCourse');
+      var test = '';
       //placer un micro dans le buton submit pour afficher la valeur dans input
-      buttonSubmit.addEventListener(('click'), () => {
-        const value = input.value;
-        console.log(value);
+      buttonSubmit.addEventListener(('click'), () => {  
+        event.preventDefault();
+        test = input.value;
+        
+        list.insertAdjacentHTML('beforeend', '- ' + test + '<br>' );
+        
+        input.value = '';
         //insert element value dana la div liste de course
+        
       });
+
+      button.addEventListener(('click'), () => {
+        event.preventDefault();
+        list.value = '';
+        
+      });
+
       //afficher dans zone de texte
-      // effacer input quant on appuie sur envoyer
-      // afficher sur zone de texte dans un tableau?
-      // pointer vers le bouton supprimer pour vider la zone de texte
+      
+
     </script>
   </body>
 </html>
