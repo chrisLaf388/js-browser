@@ -29,9 +29,7 @@
       const input = document.querySelector('input');
 
       //pointer vers bouton supprimer
-
-      const button = document.querySelector("#Supprime");
-
+      const buttonSupprime = document.querySelector("#Supprime");
 
       const list = document.querySelector('#maListeDeCourse');
       var test = '';
@@ -47,9 +45,10 @@
         
       });
 
-      button.addEventListener(('click'), () => {
+      buttonSupprime.addEventListener(('click'), () => {
         event.preventDefault();
-        list.value = '';
+        //Supprime le contenu div(liste de course) mais ne marche pas avec insertAdjascente
+        list.innerHTML = '';
         
       });
 
