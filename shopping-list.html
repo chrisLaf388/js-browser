@@ -21,6 +21,23 @@
     <div id="maListeDeCourse"></div>
     <script>
       //TODO
+      // récuperer value de l'input et l'enregistrer dans une variable quand on appuie sur envoyer
+      //pointer vers le bouton envoyer
+      const buttonSubmit = document.querySelector("#bouton");
+      
+      //pointer vers input pour recup value
+      const input = document.querySelector('input');
+      
+      //placer un micro dans le buton submit pour afficher la valeur dans input
+      buttonSubmit.addEventListener(('click'), () => {
+        const value = input.value;
+        console.log(value);
+
+      });
+      //afficher dans zone de texte
+      // effacer input quant on appuie sur envoyer
+      // afficher sur zone de texte dans un tableau?
+      // pointer vers le bouton supprimer pour vider la zone de texte
     </script>
   </body>
 </html>
