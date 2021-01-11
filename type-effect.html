@@ -10,7 +10,31 @@
     </h2>
     <h1>avengers</h1>
   <script>
-    //TODO
+    
+
+    //pointer h1 query selector
+    const avg = document.querySelector('h1');
+    //Avengers enregistrer dans une variable
+    const avgLetter =document.querySelector('h1').textContent;
+    console.log(avgLetter);
+    //supprimer avengers de h1
+    avg.innerText =" ";
+    //Afficher dans le html avec inseradjascentHtml
+    // for (var i = 0; i < avgLetter.length; i++) {
+    //   debugger;
+    //   setInterval(function(){
+    //     avg.insertAdjacentHTML('beforeend',avgLetter[i]);
+    //   }, 5000);
+    //   // avg.insertAdjacentHTML('beforeend',avgLetter[i]);
+    // }
+    // clearInterval(0);
+    setInterval(function(){
+        for (var i = 0; i < avgLetter.length; i++) {
+        
+        avg.insertAdjacentHTML('beforeend',avgLetter[i]);
+        }
+      }, 1000);
+
   </script>
   </body>
 </html>
