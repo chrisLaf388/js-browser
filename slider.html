@@ -12,6 +12,31 @@
   <img id="slide" width="400" height="300">
   <script>
     //TODO
+    //afficher une image avec js
+    const imgSlide = document.querySelector('#slide');
+    console.log(imgSlide);
+    
+    imgSlide.setAttribute('src', 'assets/images/slider/ulm3.jpg');
+    var i=0;
+    setInterval(() => {
+      if (i == 0){
+        imgSlide.setAttribute('src', 'assets/images/slider/ulm1.jpg');
+      }
+      else if (i == 1){
+        imgSlide.setAttribute('src', 'assets/images/slider/ulm2.jpg');
+      }
+      else if (i == 2){
+        imgSlide.setAttribute('src', 'assets/images/slider/ulm3.jpg');
+      }
+
+      i++;
+      imgSlide.getAttribute('src')
+      
+      if (i > 2){
+          i=0
+        }
+      
+    }, 2000);
   </script>
 </body>
 </html>

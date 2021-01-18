@@ -14,36 +14,33 @@
     const avg = document.querySelector('h1');
     //Avengers enregistrer dans une variable
     const avgLetter = document.querySelector('h1').textContent;
-    console.log(avgLetter);
-    
-    var bBoucleInfini = new Boolean(true);
-    var i = 0;
+    console.log(avg);
+    //avg.innerHTML = '';
     
     
-      // pb boucle infini et pb affichage lettre par lettre
-      //Dans un boucle infini
-      while(bBoucleInfini){
-        if (i === 8 || i === 0){
-            //supprimer avengers de h1
-            avg.innerText =" ";
+    var i = 8 ;
+    setInterval(() => {
+      if (i === 8 ){
+          avg.innerHTML = '';
+          i =0;
         }
-        else{
-          //fonction qui s'appelle toute seule avec le if
-          
-          avg.innerHTML+='hello'
-          i++;
-          setTimeout(() => {  
-            //avg.insertAdjacentElement('beforeend', 'l');
-          },5000);
       
-        }
-        i++;
-      //    if avgletter < 8 alors ajoute une lettre
-      //    setimeout appelle la fonction ajouteUneLettre pour engendrer une boucle qui ajoute avec un timer
-        }
+        avg.insertAdjacentHTML('beforeend', avgLetter[i])
+        i++
         
+      }, 500);
+
+      // clearInterval pour arreter la boucle
       
       
+    
+      
+
+    
+
+    
+    
+   
       
 
 
